@@ -1,0 +1,527 @@
+
+
+/* =================================
+   BLOOMSPACE - DESAIN WEBSITE
+   Tema: Pastel Pink, Ungu, dan Biru
+================================= */
+
+:root {
+  --pink: #f5a9c9;
+  --pink-soft: #fff0f6;
+  --purple: #b8a5f5;
+  --purple-soft: #f3efff;
+  --blue: #b7d9fa;
+  --cream: #fffaf5;
+  --text: #55465f;
+  --muted: #93869b;
+  --white: #ffffff;
+}
+
+/* PENGATURAN DASAR */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+/* NAVIGASI FLEXBOX */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 18px 7%;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #f5e5ef;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: 800;
+  color: #d76b9b;
+}
+
+.logo span {
+  color: #a18ae8;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #d76b9b;
+}
+
+/* KONTEN UTAMA */
+
+.container {
+  width: min(1120px, 90%);
+  margin: auto;
+}
+
+/* BERANDA */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 65px 0 40px;
+}
+
+.hero-content {
+  flex: 1 1 330px;
+}
+
+.eyebrow {
+  display: inline-block;
+  background: var(--pink-soft);
+  color: #c4568b;
+  padding: 7px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5vw, 53px);
+  line-height: 1.18;
+  margin-bottom: 17px;
+}
+
+.hero h1 span {
+  color: #d76b9b;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 520px;
+  margin-bottom: 25px;
+}
+
+/* ILUSTRASI BERANDA */
+
+.hero-art {
+  flex: 1 1 260px;
+  min-height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(
+    135deg,
+    #ffe4ef,
+    #eee6ff,
+    #e3f3ff
+  );
+  border-radius: 45% 55% 60% 40%;
+  font-size: 95px;
+  position: relative;
+  box-shadow: 0 18px 45px #d8c6ed40;
+}
+
+.hero-art small {
+  position: absolute;
+  bottom: 24px;
+  background: white;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 13px;
+  color: #9b6cae;
+}
+
+/* TOMBOL */
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 15px;
+  background: linear-gradient(
+    135deg,
+    #ed9fc2,
+    #b5a0ef
+  );
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 7px 17px #d7a4d540;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  padding: 12px 20px;
+  border-radius: 15px;
+  background: var(--purple-soft);
+  color: #826ac2;
+  font-weight: 700;
+}
+
+.btn-secondary:hover {
+  background: #e8dfff;
+}
+
+/* STATISTIK FLEXBOX */
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 20px 0 55px;
+}
+
+.stat-card {
+  flex: 1 1 180px;
+  background: white;
+  padding: 23px;
+  border-radius: 22px;
+  border: 1px solid #f4e7f3;
+  box-shadow: 0 8px 25px #cdb8d51a;
+  transition: transform 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-card .emoji {
+  font-size: 27px;
+}
+
+.stat-card h3 {
+  font-size: 28px;
+  margin: 8px 0 2px;
+}
+
+.stat-card p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* JUDUL BAGIAN */
+
+.section {
+  padding: 20px 0 55px;
+  scroll-margin-top: 90px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.section-heading h2 {
+  font-size: 26px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* FORMULIR */
+
+.form-card {
+  background: white;
+  border: 1px solid #f0e4f1;
+  border-radius: 25px;
+  padding: 28px;
+  box-shadow: 0 10px 30px #cdb8d51c;
+}
+
+.form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.field {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.field input,
+.field select,
+.field textarea,
+.search-box {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #e9ddec;
+  border-radius: 13px;
+  outline: none;
+  background: #fffbff;
+  color: var(--text);
+  transition: 0.2s;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus,
+.search-box:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 3px #b8a5f530;
+}
+
+.form-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* TABEL KEGIATAN */
+
+.table-card {
+  background: white;
+  border-radius: 23px;
+  border: 1px solid #f0e4f1;
+  padding: 22px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px #cdb8d51c;
+}
+
+.table-tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  max-width: 310px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead {
+  background: #fff0f6;
+}
+
+th,
+td {
+  padding: 15px 13px;
+  border-bottom: 1px solid #f3eaf3;
+  font-size: 13px;
+}
+
+th {
+  color: #a04d7a;
+  font-weight: 800;
+}
+
+tbody tr:hover {
+  background: #fffbff;
+}
+
+/* LABEL STATUS */
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.status-pending {
+  background: #fff0cb;
+  color: #a87817;
+}
+
+.status-done {
+  background: #dff7e8;
+  color: #34865b;
+}
+
+/* TOMBOL AKSI TABEL */
+
+.action-btn {
+  padding: 7px 10px;
+  border-radius: 9px;
+  margin: 2px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.done-btn {
+  background: #e1f7e8;
+  color: #328354;
+}
+
+.done-btn:hover {
+  background: #c9f0d6;
+}
+
+.delete-btn {
+  background: #ffe5eb;
+  color: #c34e70;
+}
+
+.delete-btn:hover {
+  background: #ffd1dc;
+}
+
+/* PESAN KETIKA TABEL KOSONG */
+
+.empty {
+  padding: 30px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* TIPS BELAJAR */
+
+.tips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.tip-card {
+  flex: 1 1 240px;
+  padding: 24px;
+  border-radius: 22px;
+  transition: transform 0.2s;
+}
+
+.tip-card:hover {
+  transform: translateY(-4px);
+}
+
+.tip-card:nth-child(1) {
+  background: #fff0f6;
+}
+
+.tip-card:nth-child(2) {
+  background: #f0ebff;
+}
+
+.tip-card:nth-child(3) {
+  background: #e8f5ff;
+}
+
+.tip-card .emoji {
+  font-size: 30px;
+}
+
+.tip-card h3 {
+  margin: 10px 0 6px;
+}
+
+.tip-card p {
+  color: #81758a;
+  font-size: 14px;
+}
+
+/* FOOTER */
+
+footer {
+  background: white;
+  border-top: 1px solid #f1e5f0;
+  padding: 25px 5%;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+footer strong {
+  color: #d76b9b;
+}
+
+/* RESPONSIVE UNTUK HP */
+
+@media (max-width: 600px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 13px;
+  }
+
+  .hero {
+    padding-top: 40px;
+  }
+
+  .hero-art {
+    min-height: 210px;
+  }
+
+  .form-card,
+  .table-card {
+    padding: 17px;
+  }
+
+  .section-heading h2 {
+    font-size: 22px;
+  }
+}

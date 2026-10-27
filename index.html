@@ -1,0 +1,250 @@
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BloomSpace | Ruang Tumbuh Mahasiswa</title>
+
+  <!-- Menghubungkan file CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVIGASI -->
+  <header class="navbar">
+    <div class="logo">🌷 Bloom<span>Space</span></div>
+
+    <nav class="nav-links">
+      <a href="#beranda">Beranda</a>
+      <a href="#tambah">Tambah Tugas</a>
+      <a href="#daftar">Daftar Tugas</a>
+      <a href="#tips">Tips Belajar</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- HALAMAN BERANDA -->
+    <section class="hero" id="beranda">
+      <div class="hero-content">
+        <span class="eyebrow">
+          ♡ Your little space to grow ♡
+        </span>
+
+        <h1>
+          Pelan-pelan saja,<br>
+          yang penting <span>bertumbuh.</span>
+        </h1>
+
+        <p>
+          Selamat datang di BloomSpace! Tempat sederhana
+          untuk mengatur kegiatan, menyelesaikan tugas,
+          dan membangun kebiasaan belajar yang lebih baik.
+        </p>
+
+        <a href="#tambah" class="btn">
+          ＋ Tambah Kegiatan
+        </a>
+      </div>
+
+      <div class="hero-art">
+        🌸📚
+        <small>One step at a time ✨</small>
+      </div>
+    </section>
+
+    <!-- STATISTIK -->
+    <section class="stats">
+      <div class="stat-card">
+        <span class="emoji">📝</span>
+        <h3 id="totalTugas">0</h3>
+        <p>Total kegiatan</p>
+      </div>
+
+      <div class="stat-card">
+        <span class="emoji">🌷</span>
+        <h3 id="belumSelesai">0</h3>
+        <p>Belum selesai</p>
+      </div>
+
+      <div class="stat-card">
+        <span class="emoji">🎀</span>
+        <h3 id="sudahSelesai">0</h3>
+        <p>Sudah selesai</p>
+      </div>
+    </section>
+
+    <!-- FORM TAMBAH KEGIATAN -->
+    <section class="section" id="tambah">
+      <div class="section-heading">
+        <div>
+          <h2>♡ Tambahkan kegiatan</h2>
+          <p>Catat hal kecil yang ingin kamu selesaikan hari ini.</p>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <form id="taskForm">
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="nama">Nama kegiatan *</label>
+              <input
+                type="text"
+                id="nama"
+                placeholder="Contoh: Belajar basis data"
+                maxlength="100"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="kategori">Kategori *</label>
+              <select id="kategori" required>
+                <option value="">Pilih kategori</option>
+                <option value="Kuliah">📚 Kuliah</option>
+                <option value="Pribadi">🌷 Pribadi</option>
+                <option value="Organisasi">🎀 Organisasi</option>
+                <option value="Pengembangan Diri">
+                  ✨ Pengembangan Diri
+                </option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="tanggal">Tanggal target *</label>
+              <input type="date" id="tanggal" required>
+            </div>
+
+            <div class="field">
+              <label for="catatan">Catatan (opsional)</label>
+              <input
+                type="text"
+                id="catatan"
+                placeholder="Tulis catatan kecil..."
+                maxlength="150"
+              >
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">
+              ♡ Simpan Kegiatan
+            </button>
+
+            <button type="reset" class="btn-secondary">
+              Reset Form
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- TABEL DAFTAR KEGIATAN -->
+    <section class="section" id="daftar">
+      <div class="section-heading">
+        <div>
+          <h2>🎀 Daftar kegiatanmu</h2>
+          <p>
+            Atur kegiatanmu dan rayakan setiap kemajuan kecil.
+          </p>
+        </div>
+      </div>
+
+      <div class="table-card">
+
+        <div class="table-tools">
+          <strong>📋 Task List</strong>
+
+          <input
+            type="search"
+            id="pencarian"
+            class="search-box"
+            placeholder="Cari nama atau kategori..."
+          >
+        </div>
+
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Kegiatan</th>
+                <th>Kategori</th>
+                <th>Tanggal</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+
+            <tbody id="isiTabel"></tbody>
+          </table>
+        </div>
+
+        <div id="pesanKosong" class="empty">
+          🌸 Belum ada kegiatan. Yuk, tambahkan kegiatan pertamamu!
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TIPS BELAJAR -->
+    <section class="section" id="tips">
+      <div class="section-heading">
+        <div>
+          <h2>🌼 Sedikit pengingat untukmu</h2>
+          <p>Belajar dengan nyaman, bukan dengan terburu-buru.</p>
+        </div>
+      </div>
+
+      <div class="tips">
+        <article class="tip-card">
+          <span class="emoji">🧸</span>
+          <h3>Mulai dari hal kecil</h3>
+          <p>
+            Pecah tugas besar menjadi beberapa langkah
+            agar lebih mudah dikerjakan.
+          </p>
+        </article>
+
+        <article class="tip-card">
+          <span class="emoji">☁️</span>
+          <h3>Istirahat itu penting</h3>
+          <p>
+            Berikan waktu untuk diri sendiri agar pikiran
+            tetap segar saat belajar.
+          </p>
+        </article>
+
+        <article class="tip-card">
+          <span class="emoji">💗</span>
+          <h3>Hargai prosesmu</h3>
+          <p>
+            Tidak harus sempurna setiap hari.
+            Terus mencoba juga merupakan kemajuan.
+          </p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Made with ♡ by <strong>BloomSpace</strong></p>
+    <p>
+      Ruang kecil untuk belajar, tumbuh,
+      dan menjadi lebih baik. 🌷
+    </p>
+  </footer>
+
+  <!-- Menghubungkan file JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
